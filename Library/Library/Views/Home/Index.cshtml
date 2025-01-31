@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center mt-5">
+    <h1 class="display-2 fw-bold">Welcome to the Library Management System!</h1>
+    <p class="lead mt-4">Manage your books, users, and loans effortlessly.</p>
+    <p>Your last visit was on: <strong>@ViewData["LastVisit"]</strong></p>
+    <div class="mt-5">
+        <a href="/Books" class="btn btn-primary me-3" style="width: 150px; height: 60px; font-size: 1.2rem; line-height: 48px;">View Books</a>
+        <a href="/Users" class="btn btn-secondary me-3" style="width: 150px; height: 60px; font-size: 1.2rem; line-height: 48px;">Manage Users</a>
+        <a href="/Loans" class="btn btn-success" style="width: 150px; height: 60px; font-size: 1.2rem; line-height: 48px;">View Loans</a>
+    </div>
+</div>

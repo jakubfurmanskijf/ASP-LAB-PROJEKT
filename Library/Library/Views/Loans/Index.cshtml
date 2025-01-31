@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Library.Models.LoanViewModel>
+
+<h1>Loans</h1>
+
+<a asp-action="Create" class="btn btn-primary mb-3">Add New Loan</a>
+
+<!-- Scrollable Container -->
+<div style="overflow-y: auto; max-height: 400px; border: 1px solid #ddd; padding: 10px;">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Book Name</th>
+                <th>User Name</th>
+                <th>Loan Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var loan in Model)
+            {
+                <tr>
+                    <td>@loan.BookName</td>
+                    <td>@loan.UserName</td>
+                    <td>@loan.LoanDate.ToString("yyyy-MM-dd HH:mm:ss")</td>
+                    <td>
+                        <a asp-action="Delete" asp-route-id="@loan.Id" class="btn btn-danger btn-sm">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Library.Data.Book>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Books</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Add New Book</a>
+</p>
+
+<!-- Scrollable Container -->
+<div style="overflow-y: auto; max-height: 400px; border: 1px solid #ddd; padding: 10px;">
+    <!-- Render the Partial View -->
+    <div id="bookList">
+        @Html.Partial("_BookList", Model)
+    </div>
+</div>
